@@ -1,7 +1,38 @@
 <div>
   <!-- <loading-component *ngIf="loading">Loading...</loading-component> OUTRA OPCAO -->
   <loading-component [show]="loading"></loading-component>
-  <button (click)="createUser()">
-    Criar
-  </button>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      name="name"
+      formControlName="name"
+    />
+
+    <input
+      type="email"
+      name="email"
+      formControlName="email"
+    />
+
+    <input
+      type="number"
+      name="age"
+      formControlName="age"
+    />
+
+    <input
+      type="number"
+      name="phone"
+      formControlName="phone"
+    />
+
+    <div *ngIf="userForm.controls.name.invalid && userForm.controls.name.touched">
+      O campo nome é obrigatório
+    </div>
+
+    <button type="submit" [disabled]="!userForm.valid">
+      <span *ngIf="!userId"> Criar </span>
+      <span *ngIf="userId"> Atualizar </span>
+    </button>
+  </form>
 </div>
