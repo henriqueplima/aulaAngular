@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import {FilterPipe } from './pipes/filter.pipe';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
@@ -18,6 +20,7 @@ import { UserPage } from './pages/User/User.page';
 
 @NgModule({
   declarations: [
+    FilterPipe,
     AppComponent,
     HeaderComponent,
     UserListPage,

@@ -1,5 +1,11 @@
 <div>
+  <input
+    type="text"
+    name="filter"
+    placeholder="Filtro"
+    (keyup)="setFilterBy($event)"
+  />
   <ul>
-    <li *ngFor="let item of usersList"> <a [routerLink]="['/user',item.id]"> {{ item.name}} </a></li>
+    <li *ngFor="let item of usersList | filter: filterBy"> <a [routerLink]="['/user',item.id]"> {{ item.name}} </a></li>
   </ul>
 </div>

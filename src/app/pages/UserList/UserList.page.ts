@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserListPage {
 
   private usersList = new Array();
+  private filterBy: String = '';
 
   constructor(
     private route:ActivatedRoute,
@@ -31,9 +32,14 @@ export class UserListPage {
            var user = data.payload.doc.data();
            this.usersList.push(user)
           }
+          console.log('passou aqui');
           console.log(this.usersList);
         }
       });
+  }
+
+  setFilterBy(event: any) {
+    this.filterBy = event.target.value;
   }
 
 }
