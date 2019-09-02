@@ -1,27 +1,34 @@
-# Teste2
+# Passo a passo para executar o projeto:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Projeto final da aula de angular.
 
-## Development server
+## Pré requisitos:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Possuir o node e Angular CLI instalado no máquina.
 
-## Code scaffolding
+## Como acessar e executar o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone o projeto pelo GitHub.
+Se preferir clone via comando: 
+git clone https://github.com/henriqueplima/aulaAngular
 
-## Build
+## Instalando as dependencias 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Acesse a pasta do projeto e executar o comando npm install para instalar as dependências do projeto.
 
-## Running unit tests
+## Subindo o servidor
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute o comando npm start para subir o projeto. Após executar o comando no CLI aparecerá a url para acessar a página inicial do app.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Firebase Hosting
 
-## Further help
+Para acessar o projeto via Firebase Hosting acesse o link abaixo:
+https://angularproject-b646b.firebaseapp.com
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Autenticação
+
+O aplicativo contém uma tela para autenticação, portanto você deverá fazer o login para acessar as demais telas. Foi feita uma tela de cadastro para criar um login, mas caso não queira criar segue abaixo um usuário padrão para autenticação:
+
+User: h.h@gmail.com
+Password: 123456
