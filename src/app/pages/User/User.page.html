@@ -2,29 +2,53 @@
   <!-- <loading-component *ngIf="loading">Loading...</loading-component> OUTRA OPCAO -->
   <loading-component [show]="loading"></loading-component>
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-    <input
-      type="text"
-      name="name"
-      formControlName="name"
-    />
+    <div class="col-md-6 mb-3">
+        <input class="form-control" type="text"
+          name="name"
+          formControlName="name"
+          placeholder="Nome Completo"
+        />
+        
+        <input
+          class="form-control"
+          type="number"
+          name="cpf"
+          formControlName="cpf"
+          placeholder="CPF"
+        />
 
-    <input
-      type="email"
-      name="email"
-      formControlName="email"
-    />
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          formControlName="email"
+          placeholder="E-mail"
+        />
 
-    <input
-      type="number"
-      name="age"
-      formControlName="age"
-    />
+        <input
+          class="form-control"
+          type="number"
+          name="zipCode"
+          formControlName="zipCode"
+          placeholder="CEP"
+        />
 
-    <input
-      type="number"
-      name="phone"
-      formControlName="phone"
-    />
+        <input
+          class="form-control"
+          type="text"
+          name="address"
+          formControlName="address"
+          placeholder="Endereço"
+        />
+
+        <input
+          class="form-control"
+          type="text"
+          name="complement"
+          formControlName="complement"
+          placeholder="Complemento"
+        />
+    </div>
 
     <div *ngIf="userForm.controls.name.invalid && userForm.controls.name.touched">
       O campo nome é obrigatório
@@ -34,5 +58,10 @@
       <span *ngIf="!userId"> Criar </span>
       <span *ngIf="userId"> Atualizar </span>
     </button>
+    <div *ngIf="userId">
+        <button type="button" class="btn btn-danger" (click)="delete()">Deletar</button>
+    </div>
+
+
   </form>
 </div>

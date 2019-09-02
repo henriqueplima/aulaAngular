@@ -12,7 +12,6 @@ export class FilterPipe implements PipeTransform {
             return items;
         }
 
-       
        var newArray = items.filter(function(user){
            return user.name.toUpperCase().includes(filterBy.toUpperCase());
        });
