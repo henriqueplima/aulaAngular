@@ -1,5 +1,16 @@
+
 <div>
-  <ul>
-    <li *ngFor="let item of usersList"> <a [routerLink]="['/user',item.id]"> {{ item.name}} </a></li>
+  <div>
+      <a href="/user" class="btn btn-success" role="button" aria-pressed="true">+</a>
+  </div>
+  <input
+    type="text"
+    class="form-control"
+    name="filter"
+    placeholder="Filtro"
+    (keyup)="setFilterBy($event)"
+  />
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let item of usersList | filter: filterBy | sort: usersList"> <a [routerLink]="['/user',item.id]"> {{ item.name}} </a></li>
   </ul>
 </div>

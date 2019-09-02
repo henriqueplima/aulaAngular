@@ -1,0 +1,9 @@
+<div class="text-center">
+    <img src="/assets/fiap.jpg" alt="" width="250" height="250">
+    <input class="form-control" type="text" placeholder="E-mail" name="email" #email>
+    <input class="form-control" type="password" placeholder="Password" name="password" #senha>
+    <div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="doAuthetication(email.value, senha.value)">Login</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="routeSignUp()">Sign Up</button>
+    </div>
+</div>

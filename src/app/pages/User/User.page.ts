@@ -12,8 +12,12 @@ export class UserPage {
   userForm = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    age: new FormControl(''),
-    phone: new FormControl(''),
+    // age: new FormControl(''),
+    // phone: new FormControl(''),
+    cpf: new FormControl(''),
+    zipCode: new FormControl(''),
+    address: new FormControl(''),
+    complement: new FormControl('')
   });
 
   private loading: boolean = false;
@@ -61,7 +65,6 @@ export class UserPage {
   }
 
   createUser(){
-    console.log('criar novo')
     this.loading = true;
     
     this.usersService.create(this.userForm.value)
@@ -88,6 +91,10 @@ export class UserPage {
     }).catch((error) => {
       this.loading = false;
     });
+  }
+
+  delete() {
+      this.usersService.delete(this.userId);
   }
 
 
